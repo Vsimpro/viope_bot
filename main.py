@@ -7,11 +7,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 # Global variables
-
-
 COURSE_ID   = os.getenv("COURSE_ID")
-CREDENTIALS = os.getenv("CREDENTIALS")
+CREDENTIALS = {
+    "username" : os.getenv("CREDENTIALS_USERNAME"),
+    "password" : os.getenv("CREDENTIALS_PASSWORD")
+}
+
 OPENAI_KEY  = os.getenv("OPENAI_KEY")
 OPENAI_ORG  = os.getenv("OPENAI_ORG")
 
